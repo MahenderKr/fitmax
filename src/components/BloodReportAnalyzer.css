@@ -1,0 +1,243 @@
+.analyzer-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.analyzer-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.analyzer-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-main, #333333);
+  margin-bottom: 0.5rem;
+}
+
+.analyzer-header p {
+  color: var(--text-muted, #666666);
+}
+
+/* Tab Navigation */
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  background: var(--bg-color, #f8f9fa);
+  color: var(--text-main, #333333);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background-color: var(--primary-color, #2e7d32);
+  color: #ffffff;
+  border-color: var(--primary-color, #2e7d32);
+}
+
+/* File Upload Dropzone */
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.dropzone {
+  width: 100%;
+  padding: 3rem;
+  border: 2px dashed var(--primary-color, #2e7d32);
+  border-radius: 10px;
+  background-color: rgba(46, 125, 50, 0.03);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropzone:hover {
+  background-color: rgba(46, 125, 50, 0.08);
+}
+
+.dropzone-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.file-types {
+  font-size: 0.85rem;
+  color: var(--text-muted, #888888);
+}
+
+/* Manual Form */
+.biomarker-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-main, #333333);
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color, #cccccc);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color, #2e7d32);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.analyze-btn {
+  flex: 2;
+  padding: 0.85rem;
+  background-color: var(--primary-color, #2e7d32);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.analyze-btn:hover {
+  opacity: 0.9;
+}
+
+.reset-btn {
+  flex: 1;
+  padding: 0.85rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Results Display */
+.analysis-results {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color, #e0e0e0);
+}
+
+.analysis-results h3 {
+  margin-bottom: 1.5rem;
+  color: var(--text-main, #333333);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.result-card {
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 5px solid #ccc;
+  background-color: var(--bg-color, #f9f9f9);
+}
+
+.result-card.status-normal {
+  border-left-color: #2e7d32;
+}
+
+.result-card.status-low {
+  border-left-color: #ed6c02;
+}
+
+.result-card.status-high {
+  border-left-color: #d32f2f;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.card-header h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.status-badge.normal { background: #e8f5e9; color: #2e7d32; }
+.status-badge.low { background: #fff3e0; color: #ed6c02; }
+.status-badge.high { background: #ffebee; color: #d32f2f; }
+
+.value-display {
+  margin-bottom: 0.75rem;
+}
+
+.val-num {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.val-unit {
+  color: var(--text-muted, #777);
+  font-size: 0.9rem;
+}
+
+.recommendation {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-main, #444);
+}
+
+.disclaimer-box {
+  background-color: #fff8e1;
+  border: 1px solid #ffe082;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #5d4037;
+  line-height: 1.5;
+}
