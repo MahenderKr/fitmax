@@ -9,15 +9,21 @@ function About() {
   ];
 
   const credentials = {
-    education: [
-      { degree: 'M.Sc. in Clinical Nutrition', institution: 'University Name', year: '2018 - 2020' },
-      { degree: 'B.Sc. in Nutrition & Dietetics', institution: 'University Name', year: '2015 - 2018' }
-    ],
-    experience: [
-      { role: 'Chief Clinical Nutritionist', company: 'Wellness Hospital / Clinic', period: '2022 - Present' },
-      { role: 'Consultant Dietitian', company: 'Health Center', period: '2020 - 2022' }
-    ]
-  };
+  education: [
+    {
+      degree: "M.Sc. in Dietetics and Applied Nutrition",
+      institution: "Manipal University",
+      year: "2022 - 2024",
+    },
+  ],
+  experience: [
+    {
+      role: "Corporate Nutritionist",
+      company: "TVS Motor Company",
+      period: "Present",
+    },
+  ],
+};
 
   return (
     <div className="about-container">

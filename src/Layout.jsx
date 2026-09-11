@@ -11,13 +11,13 @@ function Layout() {
       {/* Navigation Bar stays fixed at the top */}
       <nav className="navbar">
         <div className="nav-container">
-          <Link to="/" className="nav-logo">
+          <Link to="/" className="nav-logo" style={{ textDecoration: 'none', color: 'white' }}>
             <span className="logo-icon">🌿</span> Raji's Nourish Hub
           </Link>
 
           <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>About Me</Link>
+            <Link to="/" onClick={() => setIsMenuOpen(false)} style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)} style={{ textDecoration: 'none', color: 'white' }}>About Me</Link>
             <Link to="/book" className="nav-cta" onClick={() => setIsMenuOpen(false)}>Book a Session</Link>
           </div>
 
