@@ -11,8 +11,13 @@ function Layout() {
       {/* Navigation Bar stays fixed at the top */}
       <nav className="navbar">
         <div className="nav-container">
-          <Link to="/" className="nav-logo" style={{ textDecoration: 'none', color: 'white' }}>
-            <span className="logo-icon">🌿</span> Raji's Nourish Hub
+          <Link to="/" className="nav-logo" style={{ textDecoration: 'none', color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+            <div>
+              <span className="logo-icon">🌿</span> Raji's Nourish Hub
+            </div>
+            <span className="logo-phone" style={{ fontSize: '0.85rem', opacity: 0.9, marginTop: '2px' }}>
+              📞 +91 6380888400
+            </span>
           </Link>
 
           <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
